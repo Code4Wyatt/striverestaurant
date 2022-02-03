@@ -3,12 +3,13 @@ import { useParams } from 'react-router-dom'
 import dishes from '../data/menu.json'
 import DishComments from './DishComments'
 import { Col, Row, Container } from 'react-bootstrap'
+import { IPasta } from '../types/interface.js'
 
 const Details = () => {
-  const [pasta, setPasta] = useState(undefined)
+  const [pasta, setPasta] = useState<IPasta[]>([])
 
   const params = useParams()
-
+ 
   useEffect(() => {
     let pastaId = params.pastaId
     let pastaToShow = dishes.find((pasta) => pasta.id.toString() === pastaId)
