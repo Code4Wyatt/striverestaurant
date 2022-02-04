@@ -6,7 +6,7 @@ export interface IPasta {
     label: string;
     price: string;
     description: string;
-    comments: IComments;
+    comments: IComments[];
 }
 
 export interface IComments {
@@ -14,4 +14,13 @@ export interface IComments {
         rating: number;
         comment: string;
         author: string;
+}
+
+export interface IReservation {
+        name: string;
+        phone: string;
+        numberOfPeople: number;
+        smoking: boolean;
+        dateTime: string;
+        specialRequests: string;
 }
